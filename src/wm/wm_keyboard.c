@@ -133,7 +133,7 @@ void wm_keyboard_reconfigure(struct wm_keyboard* keyboard){
     struct xkb_keymap* keymap = xkb_map_new_from_names(context, &rules, XKB_KEYMAP_COMPILE_NO_FLAGS);
     if(keymap){
         wlr_keyboard_set_keymap(keyboard->wlr_input_device->keyboard, keymap);
-        wlr_keyboard_set_repeat_info(keyboard->wlr_input_device->keyboard, 25, 600);
+        wlr_keyboard_set_repeat_info(keyboard->wlr_input_device->keyboard, 30, 300);
 
         xkb_keymap_unref(keymap);
     }else{
